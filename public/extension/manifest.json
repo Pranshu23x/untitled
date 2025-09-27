@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Tabs + Gemini",
+  "version": "1.0.0",
+  "description": "Ask Gemini about content across your open tabs and get relevant tab links and answers.",
+  "action": {
+    "default_title": "Tabs + Gemini",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
