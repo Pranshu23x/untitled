@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabs + Gemini</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Live Tabs -->
+      <section class="section" id="tabs-section">
+        <div class="section-header">
+          <div class="section-title">Live Tabs</div>
+          <div class="row">
+            <span class="badge" id="refreshing-badge" style="display:none">Refreshing…</span>
+            <button class="btn" id="refresh-btn">Refresh</button>
+          </div>
+        </div>
+        <div class="section-body">
+          <div id="error" class="error" style="display:none"></div>
+          <div class="scroll">
+            <ul class="tabs-list" id="tabs-list"></ul>
+            <div id="no-tabs" class="small-note" style="display:none">No tabs found.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chat -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-title">Ask Gemini about your open tabs</div>
+        </div>
+        <div class="section-body">
+          <div class="chat">
+            <div id="chat-log" class="chat-log"></div>
+            <div class="input-row">
+              <input id="question" class="input" placeholder="Ask where you saw X, or what X means across your tabs…" />
+              <button id="ask" class="btn btn-primary">Ask</button>
+            </div>
+            <div class="small-note">
+              Note: Uses chrome.tabs.query and chrome.scripting.executeScript to read live tab content.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
